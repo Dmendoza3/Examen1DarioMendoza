@@ -10,13 +10,21 @@ using namespace std;
 class Starks
 {
 	public:
-		string jefeFamilia;
+		Starks();
+		string jefe;
 		int cantidadLobos;
 		string animalEmblema;
 		string lema;
-		vector<PeqFamiliasN*> ejercito;
+		vector<PeqFamiliaisN> ejercitos;
 		string gMasValioso;
 		int integrantes;
+
+		bool setStarks();
+		void addEjercito();
+		void removeEjercito();
+		void listEjercitos();
+		void modiEjericto();
+		
 		~Starks();
 };
 
