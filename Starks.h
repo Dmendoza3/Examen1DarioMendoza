@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 #ifndef STARKS_H
 #define STARKS_H
 
