@@ -9,12 +9,14 @@ using namespace std;
 class PeqFamiliasN
 {
 	public:
+		PeqFamiliasN();
 		string nombre;
 		string simbolo;
 		string lema;
 		int personas;
 		double atk;
 		double def;
+		
 };
 
 #endif

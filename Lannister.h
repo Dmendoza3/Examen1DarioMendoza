@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "GuardiaReal.h"
 
 using namespace std;
 
@@ -10,6 +11,8 @@ using namespace std;
 class Lannister
 {
 	public:
+		Lannister();		
+
 		string jefe;
 		string animalEmblema;
 		string lema;
@@ -22,7 +25,7 @@ class Lannister
         void addEjercito();
         void removeEjercito();
         void listEjercitos();
-        void modiEjericto();
+        void modiEjercito();
 
 		~Lannister();
 };

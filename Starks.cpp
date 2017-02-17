@@ -1,5 +1,7 @@
 #include "Starks.h"
 
+using namespace std;
+
 Starks::Starks()
 {
 	jefe = "";
@@ -36,7 +38,7 @@ void Starks::addEjercito()
 	cout << "Simbolo: ";
 	cin >> ejercito.simbolo;
 	cout << "Lema: ";
-	cin >> ejercito.lema
+	cin >> ejercito.lema;
 	cout << "Cantidad de personas: ";
 	cin >> ejercito.personas;
 	cout << "Ataque: ";
@@ -54,8 +56,8 @@ void Starks::removeEjercito()
 	cout << "Indice a eliminar";
 	cin >> i;
 
-	if(i >= ejercitos.size())
-		ejercitos.remove(ejercitos.begin() + i);
+	if(i < ejercitos.size())
+		ejercitos.erase(ejercitos.begin() + i);
 	else
 		cout << "No existe ese ejercito\n";
 }
@@ -68,28 +70,28 @@ void Starks::listEjercitos()
 	}
 }
 
-void Starks::modiEjericto()
+void Starks::modiEjercito()
 {	
 	int i;
 	
-	cout << "Indice a modificar";
+	cout << "Indice a modificar [" << ejercitos.size() << "]";
 	cin >> i;
 
-	if(i >= ejercitos.size()){
-		PeqFamiliaisN* ejercito = &ejercitos[i];
+	if(i < ejercitos.size()){
+		PeqFamiliasN* ejercito = &ejercitos[i];
 		cout << "Ingrese:"
 		<<		"Nombre: ";
-		cin >> ejercito.nombre;
+		cin >> ejercito->nombre;
 		cout << "Simbolo: ";
-		cin >> ejercito.simbolo;
+		cin >> ejercito->simbolo;
 		cout << "Lema: ";
-		cin >> ejercito.lema
+		cin >> ejercito->lema;
 		cout << "Cantidad de personas: ";
-		cin >> ejercito.personas;
+		cin >> ejercito->personas;
 		cout << "Ataque: ";
-		cin >> ejercito.atk;
+		cin >> ejercito->atk;
 		cout << "Defensa: ";
-		cin >> ejercito.def;
+		cin >> ejercito->def;
 
 	}else
 		cout << "No existe ese ejercito\n";
@@ -97,9 +99,4 @@ void Starks::modiEjericto()
 
 Starks::~Starks()
 {
-	for(int i = 0; i < ejercito.size(); i++)
-	{
-		delete ejercito[i];
-	}
-	ejercito.clear();
 }

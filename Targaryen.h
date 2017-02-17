@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Dohtraki.h"
 
 using namespace std;
 
@@ -15,14 +16,14 @@ class Targaryen
 		string animalEmblema;
 		string lema;
 		int dragones;
-		vector<Dohtraki> ejercito;
+		vector<Dohtraki> ejercitos;
 		int barcos;
 
 		bool setTargaryen();
         void addEjercito();
         void removeEjercito();
         void listEjercitos();
-        void modiEjericto();
+        void modiEjercito();
 
 		~Targaryen();
 };

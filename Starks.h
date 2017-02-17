@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "PeqFamiliasN.h"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ class Starks
 		int cantidadLobos;
 		string animalEmblema;
 		string lema;
-		vector<PeqFamiliaisN> ejercitos;
+		vector<PeqFamiliasN> ejercitos;
 		string gMasValioso;
 		int integrantes;
 
@@ -23,7 +24,7 @@ class Starks
 		void addEjercito();
 		void removeEjercito();
 		void listEjercitos();
-		void modiEjericto();
+		void modiEjercito();
 		
 		~Starks();
 };

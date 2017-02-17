@@ -9,9 +9,10 @@ using namespace std;
 class Dohtraki
 {
 	public:
+		Dohtraki();
 		string nombre;
 		string jefe;
-		string nombrecaballo;
+		string nombreCaballo;
 		string colorCaballo;
 		double atk;
 		double def;

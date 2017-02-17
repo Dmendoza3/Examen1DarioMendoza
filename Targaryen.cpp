@@ -18,8 +18,6 @@ bool Targaryen::setTargaryen()
     cin >> animalEmblema;
     cout << "Lema: ";
     cin >> lema;
-    cout << "Guerro mas valioso: ";
-    cin >> gMasValioso;
     cout << "Dragones: ";
     cin >> dragones;
 	cout << "Barcos:";
@@ -37,7 +35,7 @@ void Targaryen::addEjercito()
     cout << "Jefe: ";
     cin >> ejercito.jefe;
     cout << "Nombre del caballo: ";
-    cin >> ejercito.nombreCaballo
+    cin >> ejercito.nombreCaballo;
     cout << "Color del caballo: ";
     cin >> ejercito.colorCaballo;
     cout << "Ataque: ";
@@ -55,13 +53,13 @@ void Targaryen::removeEjercito()
     cout << "Indice a eliminar";
     cin >> i;
 
-    if(i >= ejercitos.size())
-        ejercitos.remove(ejercitos.begin() + i);
+    if(i < ejercitos.size())
+        ejercitos.erase(ejercitos.begin() + i);
     else
         cout << "No existe ese ejercito\n";
 }
 
-Targaryen::listEjercitos()
+void Targaryen::listEjercitos()
 {
     for(int i = 0; i < ejercitos.size(); i++)
     {
@@ -69,29 +67,29 @@ Targaryen::listEjercitos()
     }
 }
 
-void Starks::modiEjericto()
+void Targaryen::modiEjercito()
 {
     int i;
 
     cout << "Indice a modificar";
     cin >> i;
 
-    if(i >= ejercitos.size()){
+    if(i < ejercitos.size()){
 		Dohtraki* ejercito = &ejercitos[i];
 		
 		cout << "Ingrese:"
  	  	<<      "Nombre: ";
-   		cin >> ejercito.nombre;
+   		cin >> ejercito->nombre;
     	cout << "Jefe: ";
-    	cin >> ejercito.jefe;
+    	cin >> ejercito->jefe;
    		cout << "Nombre del caballo: ";
-    	cin >> ejercito.nombreCaballo
+    	cin >> ejercito->nombreCaballo;
     	cout << "Color del caballo: ";
-    	cin >> ejercito.colorCaballo;
+    	cin >> ejercito->colorCaballo;
     	cout << "Ataque: ";
-    	cin >> ejercito.atk;
+    	cin >> ejercito->atk;
     	cout << "Defensa: ";
-    	cin >> ejercito.def;
+    	cin >> ejercito->def;
 	
 
     }else

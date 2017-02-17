@@ -9,6 +9,7 @@ using namespace std;
 class GuardiaReal
 {
 	public:
+		GuardiaReal();
 		string nombre;
 		int edad;
 		char tipoSoldado;

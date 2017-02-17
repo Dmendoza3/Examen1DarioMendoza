@@ -5,7 +5,7 @@ Lannister::Lannister()
 	jefe = "";
 }
 
-Lannister::setLannister()
+bool Lannister::setLannister()
 {
 	if(jefe != "")
         return true;
@@ -38,7 +38,7 @@ void Lannister::addEjercito()
     <<      "Nombre: ";
     cin >> ejercito.nombre;
     cout << "Edad: ";
-    cin >> ejercito.edad
+    cin >> ejercito.edad;
     cout << "Tipo de soldado: ";
     cin >> ejercito.tipoSoldado;
     cout << "Ataque: ";
@@ -56,13 +56,13 @@ void Lannister::removeEjercito()
     cout << "Indice a eliminar";
     cin >> i;
 
-    if(i >= ejercitos.size())
-        ejercitos.remove(ejercitos.begin() + i);
+    if(i < ejercitos.size())
+        ejercitos.erase(ejercitos.begin() + i);
     else
         cout << "No existe ese ejercito\n";
 }
 
-void Starks::listEjercitos()
+void Lannister::listEjercitos()
 {
     for(int i = 0; i < ejercitos.size(); i++)
     {
@@ -70,37 +70,30 @@ void Starks::listEjercitos()
     }
 }
 
-void Starks::modiEjericto()
+void Lannister::modiEjercito()
 {
     int i;
 
     cout << "Indice a modificar";
     cin >> i;
 
-    if(i >= ejercitos.size()){
-        PeqFamiliaisN* ejercito = &ejercitos[i];
+    if(i < ejercitos.size()){
+        GuardiaReal* ejercito = &ejercitos[i];
         cout << "Ingrese:"
 		
 		<<      "Nombre: ";
-	    cin >> ejercito.nombre;
+	    cin >> ejercito->nombre;
 		cout << "Edad: ";
-   		cin >> ejercito.edad
+   		cin >> ejercito->edad;
    		cout << "Tipo de soldado: ";
-   		cin >> ejercito.tipoSoldado;
+   		cin >> ejercito->tipoSoldado;
    		cout << "Ataque: ";
-   		cin >> ejercito.atk;
+   		cin >> ejercito->atk;
    		cout << "Defensa: ";
-  		cin >> ejercito.def;
+  		cin >> ejercito->def;
     }else
         cout << "No existe ese ejercito\n";
 }
 
 
-Lannister::~Lannister()
-{
-	for(int i = 0; i < ejercito.size(); i++)
-	{
-		delete ejercito[i];
-	}
-	ejercito.clear();
-}
+Lannister::~Lannister(){}
