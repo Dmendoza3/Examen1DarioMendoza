@@ -10,13 +10,20 @@ using namespace std;
 class Lannister
 {
 	public:
-		string jefeFamilia;
+		string jefe;
 		string animalEmblema;
 		string lema;
-		vector<GuardiaReal*> ejercito;
+		vector<GuardiaReal> ejercitos;
 		int dinero;
 		string fuerzaMontana;
 		int integrantes;
+
+		bool setLannister();
+        void addEjercito();
+        void removeEjercito();
+        void listEjercitos();
+        void modiEjericto();
+
 		~Lannister();
 };
 

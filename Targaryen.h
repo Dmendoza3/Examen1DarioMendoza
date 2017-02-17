@@ -10,12 +10,20 @@ using namespace std;
 class Targaryen
 {
 	public:
+		Targaryen();
 		string reina;
 		string animalEmblema;
 		string lema;
 		int dragones;
-		vector<Dohtraki*> ejercito;
+		vector<Dohtraki> ejercito;
 		int barcos;
+
+		bool setTargaryen();
+        void addEjercito();
+        void removeEjercito();
+        void listEjercitos();
+        void modiEjericto();
+
 		~Targaryen();
 };
 

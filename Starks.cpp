@@ -34,7 +34,7 @@ void Starks::addEjercito()
 	<<		"Nombre: ";
 	cin >> ejercito.nombre;
 	cout << "Simbolo: ";
-	cin >> ejercito.imbolo;
+	cin >> ejercito.simbolo;
 	cout << "Lema: ";
 	cin >> ejercito.lema
 	cout << "Cantidad de personas: ";
@@ -81,7 +81,7 @@ void Starks::modiEjericto()
 		<<		"Nombre: ";
 		cin >> ejercito.nombre;
 		cout << "Simbolo: ";
-		cin >> ejercito.imbolo;
+		cin >> ejercito.simbolo;
 		cout << "Lema: ";
 		cin >> ejercito.lema
 		cout << "Cantidad de personas: ";
