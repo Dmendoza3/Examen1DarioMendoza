@@ -1,6 +1,6 @@
-#include "Starks.h"
+#include "Targaryen.h"
 
-Starks::~Starks()
+Targaryen::~Targaryen()
 {
 	for(int i = 0; i < ejercito.size(); i++)
 	{

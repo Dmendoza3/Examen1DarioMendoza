@@ -4,7 +4,7 @@
 #ifndef TARGARYEN_H
 #define TARGARYEN_H
 
-class Starks
+class Targaryen
 {
 	public:
 		string reina;
@@ -13,6 +13,7 @@ class Starks
 		int dragones;
 		Dohtraki* ejercito;
 		int barcos;
+		~Targaryen();
 };
 
 #endif

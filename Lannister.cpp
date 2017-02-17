@@ -1,6 +1,6 @@
-#include "Starks.h"
+#include "Lannister.h"
 
-Starks::~Starks()
+Lannister::~Lannister()
 {
 	for(int i = 0; i < ejercito.size(); i++)
 	{

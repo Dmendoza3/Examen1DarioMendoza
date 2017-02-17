@@ -14,6 +14,7 @@ class Lannister
 		int dinero;
 		string fuerzaMontana;
 		int integrantes;
+		~Lannister();
 };
 
 #endif
