@@ -273,7 +273,7 @@ int main()
 					cin >> familia2;
 				}while(familia1 == familia2);
 				
-				if(familia1 > 0 && familia1 <= 3 && familia2 > 0 && familia2 <= 3)
+				if(familia1 < 1 && familia1 > 3 && familia2 < 1 && familia2 > 3)
 					break;
 				
 				switch(familia1)
@@ -321,18 +321,21 @@ int main()
 				}
 				
 				int turn = 1;
-				while(proDef1 > 0 || proDef2 > 0)
+				while(proDef1 > 0 && proDef2 > 0)
 				{
 					if(turn == 1)
 					{
 						proDef2 -= proAtk1;
 						cout << "Familia " << famName1 << " ataca causando " << proAtk1  << endl;
-						cout << "Familia " << famName2 << " le resta " << proDef2 << endl;
+						cout << "Familia " << famName2 << " le resta " << proDef2 << " Defensa" << endl;
+						turn = 2;
 					} else {	
 						proDef1 -= proAtk2;
 						cout << "Familia " << famName2 << " ataca causando " << proAtk2  << endl;
-						cout << "Familia " << famName1 << " le resta " << proDef1 << endl;
+						cout << "Familia " << famName1 << " le resta " << proDef1 << " Defensa" << endl;
+						turn = 1;
 					}
+					cout << endl << "_____________________________________"<< endl;
 				}
 
 				if(proDef1 < 0)
