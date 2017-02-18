@@ -27,6 +27,9 @@ class Lannister
         void listEjercitos();
         void modiEjercito();
 
+		double getProAtk();
+        double getProDef();
+		
 		~Lannister();
 };
 

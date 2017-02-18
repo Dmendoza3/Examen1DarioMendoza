@@ -25,6 +25,8 @@ class Starks
 		void removeEjercito();
 		void listEjercitos();
 		void modiEjercito();
+		double getProAtk();
+		double getProDef();
 		
 		~Starks();
 };

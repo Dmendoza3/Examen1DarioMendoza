@@ -13,13 +13,13 @@ int main()
 	int menu = 1;
 	while (menu != 0)
 	{
-		cout << "1. Agregar Familia\n"
-		<<		"2. Agregar ejercito\n"
-		<<		"3. Listar ejercito\n"
-		<< 		"4. Modificar ejercito\n"
-		<<		"5. Eliminar ejercito\n"
-		<<		"6. Simulacion de batalla\n"
-		<<		"0. Salir";
+		cout << "\t1. Agregar Familia\n"
+		<<		"\t2. Agregar ejercito\n"
+		<<		"\t3. Listar ejercito\n"
+		<< 		"\t4. Modificar ejercito\n"
+		<<		"\t5. Eliminar ejercito\n"
+		<<		"\t6. Simulacion de batalla\n"
+		<<		"\t0. Salir";
 		
 		cin >> menu;
 
@@ -164,7 +164,7 @@ int main()
 				
 				int op = 0;
 				
-				cout << "Familia a listar ejercito:\n"
+				cout << "Familia a modificar ejercito:\n"
 				<<		"1. Starks\n"
 				<<		"2. Lannister\n"
 				<<		"3. Targaryen\n";
@@ -212,7 +212,7 @@ int main()
 				
 				int op = 0;
 				
-				cout << "Familia a listar ejercito:\n"
+				cout << "Familia a eliminar ejercito:\n"
 				<<		"1. Starks\n"
 				<<		"2. Lannister\n"
 				<<		"3. Targaryen\n";
@@ -253,7 +253,98 @@ int main()
 				break;
 			}
 			case 6:{
+				int familia1;
+				int familia2;
+
+				int proAtk1, proAtk2;
+				int proDef1, proDef2;
+
+				string famName1, famName2;
+
+				cout << "Primera familia: \n"
+				<<		"1. Starks\n"
+				<<		"2. Lannister\n"
+				<<		"3. Targaryen\n";
+
+				cin >> familia1;
 				
+				do{
+					cout << "Seguna familia:";
+					cin >> familia2;
+				}while(familia1 == familia2);
+				
+				if(familia1 > 0 && familia1 <= 3 && familia2 > 0 && familia2 <= 3)
+					break;
+				
+				switch(familia1)
+				{
+					case 1:{
+						proAtk1 = starks.getProAtk();
+						proDef1 = starks.getProDef();
+						famName1 = "Starks";
+						break;
+					}
+					case 2:{
+						proAtk1 = lannister.getProAtk();
+						proDef1 = lannister.getProDef();
+						famName1 = "Lannister";
+						break;
+					}
+					case 3:{
+						proAtk1 = targaryen.getProAtk();
+						proDef1 = targaryen.getProDef();
+						famName1 = "Targaryen";
+						break;
+					}
+				}
+
+				switch(familia2)
+				{
+					case 1:{	
+						proAtk2 = starks.getProAtk();
+						proDef2 = starks.getProDef();
+						famName2 = "Starks";
+						break;
+					}
+					case 2:{
+						proAtk2 = lannister.getProAtk();
+						proDef2 = lannister.getProDef();
+						famName2 = "Lannister";
+						break;
+					}
+					case 3:{
+						proAtk2 = targaryen.getProAtk();
+						proDef2 = targaryen.getProDef();
+						famName2 = "Targaryen";
+						break;
+					}
+				}
+				
+				int turn = 1;
+				while(proDef1 > 0 || proDef2 > 0)
+				{
+					if(turn == 1)
+					{
+						proDef2 -= proAtk1;
+						cout << "Familia " << famName1 << " ataca causando " << proAtk1  << endl;
+						cout << "Familia " << famName2 << " le resta " << proDef2 << endl;
+					} else {	
+						proDef1 -= proAtk2;
+						cout << "Familia " << famName2 << " ataca causando " << proAtk2  << endl;
+						cout << "Familia " << famName1 << " le resta " << proDef1 << endl;
+					}
+				}
+
+				if(proDef1 < 0)
+				{
+					cout << "Gana la familia " << famName2;
+				}
+				
+				if(proDef2 < 0)
+				{
+					cout << "Gana la familia " << famName1;
+				}
+				cout << endl;
 				break;
 			}
 		}

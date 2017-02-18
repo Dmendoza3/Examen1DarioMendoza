@@ -97,6 +97,33 @@ void Starks::modiEjercito()
 		cout << "No existe ese ejercito\n";
 }
 
+double Starks::getProAtk()
+{
+    double totAtk = 0.0;
+    for(int i = 0; i < ejercitos.size(); i++)
+    {
+        totAtk += ejercitos[i].atk;
+    }
+    
+    double proAtk = totAtk / ejercitos.size();
+        
+    return proAtk;
+}
+
+double Starks::getProDef()
+{
+    double totDef = 0.0;
+    for(int i = 0; i < ejercitos.size(); i++)
+    {
+        totDef += ejercitos[i].def;
+    }
+    
+    double proDef = totDef / ejercitos.size();
+
+    return proDef;
+}
+
+
 Starks::~Starks()
 {
 }
